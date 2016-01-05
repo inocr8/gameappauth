@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UserController < ApplicationController
 
   before_action :load_user, except:[:index, :create, :new]
 

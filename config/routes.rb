@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'lander/index'
+
   devise_for :users
 
   get 'user/index'
@@ -9,6 +11,9 @@ Rails.application.routes.draw do
 
   resources :users
   resources :games
+  resources :copies
+
+  root to: 'lander#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

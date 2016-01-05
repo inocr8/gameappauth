@@ -1,9 +1,9 @@
 class CopiesController < ApplicationController
 
-  before_action :load_copy, except:[:index, :create, :new]
+  before_action :authenticate_user!, :load_copy, except:[:index, :create, :new]
 
   def index
-    @copies = Copy.all
+    @copies = current_user.copies
   end
 
   def new

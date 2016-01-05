@@ -7,6 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1 class="notice"><%= notice %></h1>
+<h1 class="alert"><%= alert %></h1>
+
+<div class="login">
+  <% if current_user %>
+    <%= current_user.email %>
+    <br>
+    <%= link_to "log out", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "sign in", new_user_session_path %>
+    <%= link_to "register", new_user_registration_path %>
+  <% end %>
+</div>
+
+<nav>
+  <ul>
+    <li> <%= link_to 'lander', public_path %> </li>
+    <li> <%= link_to 'copies', copies_path %> </li>
+  </ul>
+</nav>
 
 <%= yield %>
 
