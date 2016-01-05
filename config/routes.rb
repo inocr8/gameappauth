@@ -3,11 +3,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get 'user/index'
-  get 'game/index'
+  # get 'user/index'
+  # get 'game/index'
 
   get 'public', to: 'lander#index'
-  get 'game', to: 'game#index'
+  get 'game', to: 'games#index'
 
   resources :users
   resources :games

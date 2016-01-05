@@ -1,3 +1,7 @@
+<h1>Copies of games for: <%= current_user.email %></h1>
+
 <% current_user.copies.each do |copy| %>
-<%= copy.game.name %>
+<h3>GAME ID<%= copy.game.id %> - <%= copy.game.name %></h3>
 <% end %>
+
+<%= link_to 'Add a Copy', new_copy_path %>

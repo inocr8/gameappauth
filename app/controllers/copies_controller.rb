@@ -4,7 +4,6 @@ class CopiesController < ApplicationController
   # before_action :load_copy, except:[:index, :create, :new]
 
   def index
-    @copies = current_user.copies
   end
 
   def new
@@ -38,7 +37,7 @@ class CopiesController < ApplicationController
 
   private
   def copy_params
-    params.require(:copy).permit(:user_id, :game_id)
+    params.require(:copy).permit(:game_id)
   end
 
   # def load_copy
