@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
    has_many :copies
-   has_many :users, through: :copies
+   has_many :games, through: :copies
 end

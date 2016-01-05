@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Game.delete_all
+
+g1 = Game.create!(name: "Big John Bananarammar")
+g2 = Game.create!(name: "Street Fighter")
+g3 = Game.create!(name: "Knotts Landing Crosses")

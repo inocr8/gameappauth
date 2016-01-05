@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'user/index'
   get 'game/index'
 
-  get 'public', to: 'user#index'
+  get 'public', to: 'lander#index'
   get 'game', to: 'game#index'
 
   resources :users
